@@ -16,7 +16,8 @@ public enum FailoverOption {
     case emergency
 }
 
-open class Tello {
+@available(iOS 13.0, *)
+open class Tello: ObservableObject {
     // MARK: Drone private variables
     var _isEDU: Bool = true
     
