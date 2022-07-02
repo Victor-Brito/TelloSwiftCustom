@@ -19,7 +19,7 @@ public protocol TelloFlightControl: TelloMotion {
     
     func beforeLand(do cmd: String, shutdown: Bool) -> Bool
 }
-
+@available(iOS 13.0, *)
 extension Tello: TelloFlightControl {
     
     public func takeoffAnd(operation: @escaping () -> Void) {

@@ -74,7 +74,7 @@ public protocol DroneTello {
     /// raw data example: 90
     var wifiSNR: Double { get }
 }
-
+@available(iOS 13.0, *)
 extension Tello: DroneTello {
     
     public var speed: Double {

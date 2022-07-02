@@ -38,7 +38,7 @@ public protocol MissionPadControl: EDU, TelloCommander {
 
     func jump(mid1: MissionPadID, mid2: MissionPadID, x: Int, y: Int, z: Int, speed: Int, yaw: Int) -> Bool
 }
-
+@available(iOS 13.0, *)
 public extension MissionPadControl  {
 
     func enable(detection enable: Bool) -> Bool {
@@ -94,7 +94,7 @@ public extension MissionPadControl  {
         return telloSyncCommand(cmd: "go \(x) \(y) \(z) \(speed) \(yaw) \(mid1.rawValue) \(mid2.rawValue)").okToBool()
     }
 }
-
+@available(iOS 13.0, *)
 extension Tello: MissionPadControl {
     
     public var detectionEnabled: Bool? {

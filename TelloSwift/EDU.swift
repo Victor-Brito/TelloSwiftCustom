@@ -23,7 +23,7 @@ public protocol EDU {
     /// raw data example: 20
     var sdkVersion: String? { get }
 }
-
+@available(iOS 13.0, *)
 extension Tello: EDU {
     public var isEDU: Bool {
         return _isEDU

@@ -14,7 +14,7 @@ public protocol CameraControl: TelloCommander {
     @discardableResult
     func enable(video enable: Bool) -> Bool
 }
-
+@available(iOS 13.0, *)
 extension CameraControl {
     
     @discardableResult
@@ -25,7 +25,7 @@ extension CameraControl {
         return ok
     }
 }
-
+@available(iOS 13.0, *)
 extension Tello: CameraControl {
     
     public var videoEnabled: Bool? {

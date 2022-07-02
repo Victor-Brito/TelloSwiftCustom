@@ -76,7 +76,7 @@ public protocol TelloMotion: TelloCommander {
 
     func setSpeed(to speed: Int) -> Bool
 }
-
+@available(iOS 13.0, *)
 public extension TelloMotion {
     
     @discardableResult
@@ -189,7 +189,7 @@ public extension TelloMotion {
         return telloSyncCommand(cmd: "speed \(speed)").okToBool()
     }
 }
-
+@available(iOS 13.0, *)
 extension Tello: TelloMotion {
     
 }
